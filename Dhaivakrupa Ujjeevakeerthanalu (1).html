@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="te"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dhaivakrupa Ujjeevakeerthanalu</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--bg:#fbf7f0;--card:#fff;--tx:#2a2230;--mu:#7b7080;--bd:#ece1cf;--ac:#8a2f4a;--ac2:#d4a23a;--sh:0 10px 30px rgba(60,30,60,.10)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#15111a;--card:#211b27;--tx:#f3ecf5;--mu:#a99eb0;--bd:#372e3e;--sh:0 10px 30px rgba(0,0,0,.4)}}
+:root[data-theme=dark]{--bg:#15111a;--card:#211b27;--tx:#f3ecf5;--mu:#a99eb0;--bd:#372e3e;--sh:0 10px 30px rgba(0,0,0,.4)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:'Noto Sans Telugu',system-ui,sans-serif;line-height:1.65;overflow-x:hidden}
+header{position:relative;color:#fff;text-align:center;padding:clamp(56px,9vw,96px) 18px clamp(70px,10vw,110px);overflow:hidden;background:radial-gradient(circle at 20% 10%,rgba(212,162,58,.35),transparent 45%),radial-gradient(circle at 85% 90%,rgba(255,255,255,.12),transparent 40%),linear-gradient(135deg,var(--ac),color-mix(in srgb,var(--ac) 40%,#150a1c))}
+header:before{content:"✝";position:absolute;font-size:340px;right:-40px;top:-60px;opacity:.06;transform:rotate(12deg)}
+header:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:40px;background:var(--bg);border-radius:50% 50% 0 0/100% 100% 0 0}
+.hero{position:relative;z-index:1;max-width:760px;margin:auto;animation:up .7s both}
+@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.cross{width:58px;height:58px;margin:0 auto 10px;border-radius:50%;display:grid;place-items:center;font-size:28px;color:var(--ac2);background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(6px)}
+header h1{font-family:'Playfair Display','Noto Sans Telugu',serif;margin:6px 0 4px;font-size:clamp(28px,6.2vw,52px);line-height:1.15;letter-spacing:.3px}
+header p{margin:0 0 14px;font-size:clamp(15px,2.6vw,19px);opacity:.9}
+.pill{display:inline-block;padding:5px 14px;border-radius:30px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.25);font-size:13px}
+.top{position:absolute;right:max(12px,env(safe-area-inset-right));top:12px;display:flex;gap:6px;z-index:2}
+button{font:inherit;cursor:pointer;transition:.18s}
+.btn{background:var(--ac);color:#fff;border:0;padding:10px 18px;border-radius:12px;font-weight:600;min-height:42px}
+.btn:hover{filter:brightness(1.1)}.btn:active{transform:scale(.97)}
+.btn.alt{background:transparent;color:var(--ac);border:1px solid var(--bd)}
+.btn.ghost{background:rgba(255,255,255,.16);color:#fff;border:1px solid rgba(255,255,255,.25);padding:7px 13px;border-radius:30px;font-size:13px;min-height:0;backdrop-filter:blur(6px)}
+.btn.del{background:#b3261e}
+main{max-width:1040px;margin:-6px auto 30px;padding:0 clamp(12px,3vw,24px)}
+.bar{position:sticky;top:max(8px,env(safe-area-inset-top));z-index:5;background:color-mix(in srgb,var(--card) 88%,transparent);backdrop-filter:blur(14px);border:1px solid var(--bd);border-radius:20px;padding:12px;box-shadow:var(--sh);margin-top:-52px}
+input,select,textarea{font:inherit;background:var(--bg);color:var(--tx);border:1px solid var(--bd);border-radius:12px;padding:12px 14px;width:100%;outline:0}
+input:focus,select:focus,textarea:focus{border-color:var(--ac);box-shadow:0 0 0 3px color-mix(in srgb,var(--ac) 20%,transparent)}
+#q{font-size:16px}
+#cat{display:none}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:10px 2px 2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;border:1px solid var(--bd);background:var(--bg);color:var(--tx);padding:7px 15px;border-radius:30px;font-size:14px;white-space:nowrap}
+.chip.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:16px;margin-top:22px}
+.card{position:relative;background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:16px 38px 16px 16px;cursor:pointer;display:flex;gap:14px;align-items:center;box-shadow:var(--sh);animation:up .5s both;transition:.2s}
+.card:after{content:"›";position:absolute;right:16px;font-size:26px;color:var(--ac2)}
+.card:hover{transform:translateY(-3px);border-color:var(--ac2)}
+.num{flex:none;width:46px;height:46px;border-radius:14px;background:linear-gradient(135deg,var(--ac),color-mix(in srgb,var(--ac) 50%,#000));color:#fff;display:grid;place-items:center;font-weight:700;box-shadow:0 4px 10px color-mix(in srgb,var(--ac) 40%,transparent)}
+.card h3{margin:0;font-size:17px;line-height:1.35}.tag{font-size:12.5px;color:var(--mu)}
+.empty{text-align:center;color:var(--mu);padding:50px 10px}
+.modal{position:fixed;inset:0;background:rgba(15,8,20,.62);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;overflow:auto;padding:20px 12px;z-index:20}
+.modal.on{display:flex}
+.sheet{background:var(--card);border-radius:24px;max-width:660px;width:100%;max-height:92vh;overflow:auto;padding:26px;position:relative;animation:up .3s both;box-shadow:0 30px 80px rgba(0,0,0,.4)}
+.sheet h2{margin:0 34px 4px 0;color:var(--ac);font-size:clamp(20px,4vw,26px);line-height:1.3}
+.x{position:absolute;right:14px;top:12px;width:36px;height:36px;border-radius:50%;background:var(--bg);border:0;font-size:22px;color:var(--mu)}
+.lyrics{white-space:pre-wrap;font-size:var(--fs,19px);line-height:2;margin:16px 0 4px;padding:18px;border-radius:16px;background:var(--bg);border-left:4px solid var(--ac2)}
+.lyrics-img{max-width:100%;border-radius:14px;margin-top:14px}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+label{display:block;font-size:13px;font-weight:600;margin:14px 0 5px;color:var(--mu)}
+.tabs{display:flex;gap:6px;margin:12px 0;overflow-x:auto;scrollbar-width:none}
+.tabs button{flex:none;background:var(--bg);border:1px solid var(--bd);color:var(--tx);padding:9px 15px;border-radius:30px}
+.tabs button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.li{display:flex;align-items:center;gap:8px;padding:12px 0;border-bottom:1px solid var(--bd);flex-wrap:wrap}
+.li span{flex:1;min-width:150px}
+footer{text-align:center;color:var(--mu);padding:26px 16px 34px;font-size:14px;border-top:1px solid var(--bd);margin:0 auto;max-width:700px}
+.pv{max-width:100%;max-height:220px;border-radius:10px;margin-top:8px}
+.hide{display:none!important}
+@media(max-width:640px){
+ .modal{align-items:flex-end;padding:0}
+ .sheet{border-radius:24px 24px 0 0;max-height:94vh;padding:22px 16px calc(22px + env(safe-area-inset-bottom,0px))}
+ .btn.ghost{padding:6px 10px}
+ .row .btn{flex:1}
+ .li .btn{padding:8px 12px}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style></head><body>
+<header>
+ <div class="top"><button class="btn ghost" id="th">◐ Theme</button><button class="btn ghost" id="adm">⚙ Admin</button></div>
+ <div class="hero"><div class="cross">✝</div><h1 id="sn"></h1><p id="st"></p><span class="pill" id="cnt"></span></div>
+</header>
+<main>
+ <div class="bar"><input id="q" placeholder="పాట వెతకండి / Search songs…"><select id="cat"></select><div class="chips" id="chips"></div></div>
+ <div class="grid" id="list"></div>
+ <p id="about" style="text-align:center;color:var(--mu);margin-top:34px"></p>
+</main>
+<footer id="ft"></footer>
+
+<div class="modal" id="vm"><div class="sheet" id="vs"></div></div>
+<div class="modal" id="am"><div class="sheet" style="max-width:760px" id="as"></div></div>
+
+<script>
+const K='dhaiva_v1';
+const seed={s:{name:'Dhaivakrupa Ujjeevakeerthanalu',tag:'దైవకృప ఉజ్జీవకీర్తనలు',about:'దేవుని మహిమ కొరకు క్రైస్తవ కీర్తనల సంకలనం.',footer:'© Dhaivakrupa Ujjeevakeerthanalu',ac:'#8a2f4a',cats:['ఆరాధన','ఉజ్జీవ గీతాలు','క్రిస్మస్','ఈస్టర్','ప్రార్థన'],pw:'admin123'},
+songs:[{id:1,no:1,title:'యేసయ్యా నీ ప్రేమ',cat:'ఆరాధన',type:'text',body:'యేసయ్యా నీ ప్రేమ గొప్పది\nనా జీవితమంతా నీదే\n\nఆరాధన ఆరాధన\nనీకే నా ఆరాధన'},
+{id:2,no:2,title:'ఉజ్జీవం పంపుము',cat:'ఉజ్జీవ గీతాలు',type:'text',body:'ఉజ్జీవం పంపుము ప్రభువా\nనీ ఆత్మను కుమ్మరించుము\n\nహల్లెలూయ హల్లెలూయ\nహల్లెలూయ ఆమేన్'}]};
+let D;try{D=JSON.parse(localStorage.getItem(K))}catch(e){}
+if(!D||!D.s)D=JSON.parse(JSON.stringify(seed));
+let admin=false,ed=null,tab='songs';
+const $=i=>document.getElementById(i);
+const esc=t=>String(t||'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function save(){try{localStorage.setItem(K,JSON.stringify(D));return true}catch(e){alert('Storage full — use a smaller photo or delete some songs.');return false}}
+function site(){const s=D.s;document.title=s.name;$('sn').textContent=s.name;$('st').textContent=s.tag;$('about').textContent=s.about;$('ft').textContent=s.footer;document.documentElement.style.setProperty('--ac',s.ac);
+ const c=$('cat'),v=c.value;c.innerHTML='<option value="">అన్ని విభాగాలు / All</option>'+s.cats.map(x=>`<option>${esc(x)}</option>`).join('');c.value=v;chips()}
+function chips(){const v=$('cat').value;$('chips').innerHTML=['',...D.s.cats].map(c=>`<button class="chip ${c===v?'on':''}" data-c="${esc(c)}">${c?esc(c):'అన్నీ · All'}</button>`).join('')}
+$('chips').onclick=e=>{const b=e.target.closest('.chip');if(!b)return;$('cat').value=b.dataset.c;chips();render()};
+function render(){$('cnt').textContent='🎵 '+D.songs.length+' కీర్తనలు';const q=$('q').value.toLowerCase(),c=$('cat').value;
+ const r=D.songs.filter(x=>(!c||x.cat===c)&&(!q||(x.title+' '+(x.body||'')+' '+x.no).toLowerCase().includes(q))).sort((a,b)=>a.no-b.no);
+ $('list').innerHTML=r.length?r.map(x=>`<div class="card" onclick="view(${x.id})"><div class="num">${esc(x.no)}</div><div><h3>${esc(x.title)}</h3><div class="tag">${esc(x.cat)} ${x.type==='image'?'· 📷':''}</div></div></div>`).join(''):'<div class="empty" style="grid-column:1/-1">పాటలు లేవు / No songs found</div>'}
+let fs=19;
+function view(id){const x=D.songs.find(s=>s.id===id);fs=19;
+ $('vs').innerHTML=`<button class="x" onclick="$('vm').classList.remove('on')">×</button><h2>${x.no}. ${esc(x.title)}</h2><div class="tag">${esc(x.cat)}</div>
+ <div class="row"><button class="btn alt" onclick="zoom(2)">A+</button><button class="btn alt" onclick="zoom(-2)">A−</button><button class="btn alt" onclick="cp(${id})">Copy / Share</button></div>
+ ${x.type==='image'?`<img class="lyrics-img" src="${x.body}" alt="${esc(x.title)}">`:`<div class="lyrics" id="ly">${esc(x.body)}</div>`}`;$('vm').classList.add('on')}
+function zoom(d){fs=Math.max(13,Math.min(34,fs+d));const l=$('ly');if(l)l.style.setProperty('--fs',fs+'px')}
+function cp(id){const x=D.songs.find(s=>s.id===id);const t=x.type==='text'?`${x.title}\n\n${x.body}\n\n— ${D.s.name}`:`${x.title} — ${D.s.name}`;
+ if(navigator.share)navigator.share({title:x.title,text:t}).catch(()=>{});else try{navigator.clipboard.writeText(t);alert('Copied')}catch(e){}}
+$('q').oninput=render;$('cat').onchange=render;
+$('th').onclick=()=>{const r=document.documentElement,d=r.dataset.theme==='dark'||(!r.dataset.theme&&matchMedia('(prefers-color-scheme:dark)').matches);r.dataset.theme=d?'light':'dark'};
+$('vm').onclick=e=>{if(e.target.id==='vm')$('vm').classList.remove('on')};
+$('adm').onclick=()=>{if(!admin){const p=prompt('Admin password');if(p!==D.s.pw){if(p!==null)alert('Wrong password');return}admin=true}tab='songs';ed=null;adminUI();$('am').classList.add('on')};
+function adminUI(){const t=(k,l)=>`<button class="${tab===k?'on':''}" onclick="tab='${k}';ed=null;adminUI()">${l}</button>`;
+ let h=`<button class="x" onclick="$('am').classList.remove('on')">×</button><h2>CMS Dashboard</h2><div class="tabs">${t('songs','🎵 Songs')}${t('add',ed?'✏ Edit Song':'➕ Add Song')}${t('set','⚙ Site Settings')}${t('data','💾 Backup')}</div>`;
+ if(tab==='songs')h+=D.songs.sort((a,b)=>a.no-b.no).map(x=>`<div class="li"><span><b>${x.no}.</b> ${esc(x.title)} <small class="tag">${esc(x.cat)}</small></span><button class="btn alt" onclick="edit(${x.id})">Edit</button><button class="btn del" onclick="del(${x.id})">Delete</button></div>`).join('')||'<div class="empty">No songs yet</div>';
+ if(tab==='add'){const e=ed||{no:Math.max(0,...D.songs.map(s=>+s.no))+1,title:'',cat:D.s.cats[0],type:'text',body:''};window._e=e;
+  h+=`<label>Song number</label><input id="f_no" type="number" value="${e.no}"><label>Title</label><input id="f_t" value="${esc(e.title)}"><label>Category</label><select id="f_c">${D.s.cats.map(c=>`<option ${c===e.cat?'selected':''}>${esc(c)}</option>`).join('')}</select>
+  <label>Upload as</label><select id="f_y" onchange="ty()"><option value="text" ${e.type==='text'?'selected':''}>Text (type or paste lyrics)</option><option value="image" ${e.type==='image'?'selected':''}>Photo (image of lyrics)</option></select>
+  <div id="bt"><label>Lyrics</label><textarea id="f_b" rows="10">${esc(e.type==='text'?e.body:'')}</textarea></div>
+  <div id="bi" class="hide"><label>Choose photo</label><input type="file" id="f_f" accept="image/*" onchange="pic(this)"><img id="pv" class="pv ${e.type==='image'?'':'hide'}" src="${e.type==='image'?e.body:''}"></div>
+  <div class="row"><button class="btn" onclick="sv()">Save song</button></div>`}
+ if(tab==='set'){const s=D.s;h+=`<label>Site name</label><input id="s_n" value="${esc(s.name)}"><label>Tagline</label><input id="s_t" value="${esc(s.tag)}"><label>About text</label><textarea id="s_a" rows="3">${esc(s.about)}</textarea><label>Footer</label><input id="s_f" value="${esc(s.footer)}"><label>Theme colour</label><input id="s_c" type="color" value="${s.ac}" style="height:44px"><label>Categories (comma separated)</label><input id="s_k" value="${esc(s.cats.join(', '))}"><label>Admin password</label><input id="s_p" value="${esc(s.pw)}"><div class="row"><button class="btn" onclick="ss()">Save settings</button></div>`}
+ if(tab==='data')h+=`<p class="tag">Data is stored in this browser. Export a backup regularly, and import it on another device.</p><div class="row"><button class="btn" onclick="ex()">Export JSON</button><label class="btn alt" style="margin:0">Import JSON<input type="file" accept=".json" class="hide" onchange="im(this)"></label><button class="btn alt" onclick="admin=false;$('am').classList.remove('on')">Log out</button></div>`;
+ $('as').innerHTML=h;if(tab==='add')ty()}
+function ty(){const i=$('f_y').value==='image';$('bt').classList.toggle('hide',i);$('bi').classList.toggle('hide',!i)}
+function pic(inp){const f=inp.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{const im=new Image();im.onload=()=>{const m=1100,k=Math.min(1,m/Math.max(im.width,im.height)),c=document.createElement('canvas');c.width=im.width*k;c.height=im.height*k;c.getContext('2d').drawImage(im,0,0,c.width,c.height);window._img=c.toDataURL('image/jpeg',.7);$('pv').src=window._img;$('pv').classList.remove('hide')};im.src=r.result};r.readAsDataURL(f)}
+function sv(){const e=window._e,ty=$('f_y').value,t=$('f_t').value.trim();if(!t)return alert('Enter a title');
+ let b=ty==='text'?$('f_b').value:(window._img||(e.type==='image'?e.body:''));if(!b.trim())return alert(ty==='text'?'Enter lyrics':'Choose a photo');window._img=null;
+ const o={id:e.id||Date.now(),no:+$('f_no').value||1,title:t,cat:$('f_c').value,type:ty,body:b};
+ const i=D.songs.findIndex(s=>s.id===o.id);const old=JSON.stringify(D);i>=0?D.songs[i]=o:D.songs.push(o);
+ if(!save()){D=JSON.parse(old);return}ed=null;tab='songs';adminUI();render()}
+function edit(id){ed=D.songs.find(s=>s.id===id);tab='add';adminUI()}
+function del(id){if(confirm('Delete this song?')){D.songs=D.songs.filter(s=>s.id!==id);save();adminUI();render()}}
+function ss(){const s=D.s;s.name=$('s_n').value;s.tag=$('s_t').value;s.about=$('s_a').value;s.footer=$('s_f').value;s.ac=$('s_c').value;s.cats=$('s_k').value.split(',').map(x=>x.trim()).filter(Boolean);s.pw=$('s_p').value||'admin123';save();site();render();alert('Saved')}
+function ex(){const a=document.createElement('a');a.href='data:application/json;charset=utf-8,'+encodeURIComponent(JSON.stringify(D));a.download='dhaivakrupa-backup.json';a.click()}
+function im(i){const f=i.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{try{const d=JSON.parse(r.result);if(!d.s||!d.songs)throw 0;D=d;save();site();render();adminUI();alert('Imported')}catch(e){alert('Invalid file')}};r.readAsText(f)}
+site();render();
+</script></body></html>
